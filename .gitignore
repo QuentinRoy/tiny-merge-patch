@@ -1,3 +1,4 @@
 node_modules
 coverage
 cjs
+.nyc_output
