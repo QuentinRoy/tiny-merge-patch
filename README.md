@@ -96,4 +96,4 @@ console.assert(
 
 # License
 
-  MIT
+  [MIT](./LICENSE)
