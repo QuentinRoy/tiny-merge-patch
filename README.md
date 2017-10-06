@@ -1,5 +1,5 @@
-Nano JSON Merge Patch
-=====================
+Tiny Merge Patch
+===============
 
 [![Build Status](https://travis-ci.org/QuentinRoy/nano-json-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/nano-json-merge-patch)
 [![Test Coverage](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch)
@@ -31,14 +31,14 @@ npm install nano-json-merge-patch --save
 
 ```js
 // Fetch `apply` from the module.
-const jsonMergePatch = require('nano-json-merge-patch').apply;
+const mergePatch = require('tiny-merge-patch').apply;
 ```
 
 ### ES modules in the browser
 
 ```js
 // `apply` is also the default export.
-import jsonMergePatch from 'https://unpkg.com/nano-json-merge-patch/esm/index.js'
+import mergePatch from 'https://unpkg.com/tiny-merge-patch/esm/index.js'
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ const patch = {
   }
 };
 
-const patchedDoc = jsonMergePatch(doc, patch);
+const patchedDoc = mergePatch(doc, patch);
 
 // Apply JSON merge patches.
 console.assert(

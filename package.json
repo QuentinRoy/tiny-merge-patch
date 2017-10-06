@@ -1,12 +1,9 @@
 {
-  "name": "nano-json-merge-patch",
+  "name": "tiny-merge-patch",
   "version": "0.1.0",
   "description": "JSON Merge Patch (RFC 7396) Implementation",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
-  "directories": {
-    "test": "test"
-  },
   "devDependencies": {
     "@commitlint/cli": "^4.1.0",
     "@commitlint/config-angular": "^3.1.1",
@@ -40,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierreinglebert/json-merge-patch.git"
+    "url": "https://github.com/QuentinRoy/tiny-merge-patch.git"
   },
   "keywords": [
     "JSON",
@@ -52,9 +49,9 @@
   "author": "Quentin Roy <quentin@quentinroy.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/quentinroy/nano-json-merge-patch/issues"
+    "url": "https://github.com/quentinroy/tiny-merge-patch/issues"
   },
-  "homepage": "https://github.com/QuentinRoy/nano-json-merge-patch",
+  "homepage": "https://github.com/QuentinRoy/tiny-merge-patch",
   "ava": {
     "require": [
       "babel-register"
