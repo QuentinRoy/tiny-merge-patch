@@ -2,7 +2,9 @@ Nano JSON Merge Patch
 =====================
 
 [![Build Status](https://travis-ci.org/QuentinRoy/nano-json-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/nano-json-merge-patch)
-[![codecov](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch)
+[![Test Coverage](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/nano-json-merge-patch)
+[![dependencies Status](https://david-dm.org/quentinroy/nano-json-merge-patch/status.svg)](https://david-dm.org/quentinroy/nano-json-merge-patch)
+[![devDependencies Status](https://david-dm.org/quentinroy/nano-json-merge-patch/dev-status.svg)](https://david-dm.org/quentinroy/nano-json-merge-patch?type=dev)
 
 An implementation of the JSON Merge Patch [RFC 7396](http://tools.ietf.org/html/rfc7396)
 
