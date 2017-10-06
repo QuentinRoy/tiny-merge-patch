@@ -2,8 +2,8 @@ Tiny Merge Patch
 ===============
 
 [![Build Status](https://travis-ci.org/QuentinRoy/tiny-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/tiny-merge-patch)
-[![Test Coverage](https://codecov.io/gh/QuentinRoy/tiny-merge-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/tiny-merge-merge-patch)
-[![dependencies Status](https://david-dm.org/quentinroy/tiny-merge-merge-patch/status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch)
+[![codecov](https://codecov.io/gh/QuentinRoy/tiny-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/tiny-merge-patch)
+[![dependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch)
 [![devDependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/dev-status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch?type=dev)
 
 An implementation of the JSON Merge Patch
