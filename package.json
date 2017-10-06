@@ -41,9 +41,9 @@
   },
   "keywords": [
     "JSON",
-    "Merge",
-    "Patch",
-    "rfc",
+    "merge",
+    "patch",
+    "RFC",
     "7396"
   ],
   "author": "Quentin Roy <quentin@quentinroy.fr>",
