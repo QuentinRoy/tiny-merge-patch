@@ -89,16 +89,17 @@ All are in-place.
 To avoid mutations of the original object, one can deep-clone beforehand, but it can be expensive.
 At the contrary, `tiny-merge-patch` does not alter any of its arguments—but
 recycles what it can.
-Recycling also allows efficient memoization based on strict identity
+Recycling also allows efficient strict identity-based memoization
 (used by [React](https://reactjs.org)'s [PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent) for example).
 
-All of them also embed additional functionalities, such as patch generation from two objects or merge of patches.
-This library only focuses on the IETF standard and on patch applications.
+All of the above libraries also embed additional functionalities, such as patch generation from two objects or merge of patches.
+`tiny-merge-patch` only focuses on the IETF standard and on patch applications.
 
 (None of the above libraries are particularly big.
-Still, this is smaller if you only need to apply patches.
-It is also worth mentioning that unlike [JSON patches](https://tools.ietf.org/html/rfc6902), there is no way
-to implement merge of merge patches that reliably preserves deletion.)
+Still, `tiny-merge-patch` is smaller if you only need to apply patches.
+It is also worth mentioning that unlike
+[JSON patches](https://tools.ietf.org/html/rfc6902), there is no way to
+implement merge of merge patches that reliably preserves deletion.)
 
 - [`immutable-merge-patch`](https://www.npmjs.com/package/immutable-merge-patch)
 
