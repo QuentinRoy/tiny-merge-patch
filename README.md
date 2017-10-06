@@ -8,7 +8,7 @@ Tiny Merge Patch
 
 An implementation of the JSON Merge Patch
 [RFC 7396](http://tools.ietf.org/html/rfc7396): a standard format used to
-describe modifications to JSON documents.
+describe modifications to JSON documents. Passes all [RFC 7396](http://tools.ietf.org/html/rfc7396) tests.
 
 This library complies with the functional programming style: it does not mutate
 the original target, but recycle what it can.
@@ -110,7 +110,7 @@ Recycling also allows efficient memoization based on strict identity
 All of them also embed additional functionalities, such as patch generation from two objects or merge of patches.
 This library only focuses on the IETF standard and on patch applications.
 
-(None of the above libraries particularly big.
+(None of the above libraries are particularly big.
 Still, this is smaller if you only need to apply patches.
 It is also worth mentioning that unlike [JSON patches](https://tools.ietf.org/html/rfc6902), there is no way
 to implement merge of merge patches that reliably preserves deletion.)
