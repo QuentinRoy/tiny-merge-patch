@@ -1,5 +1,5 @@
 Tiny Merge Patch
-===============
+================
 
 [![Build Status](https://travis-ci.org/QuentinRoy/tiny-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/tiny-merge-patch)
 [![codecov](https://codecov.io/gh/QuentinRoy/tiny-merge-patch/branch/master/graph/badge.svg)](https://codecov.io/gh/QuentinRoy/tiny-merge-patch)
@@ -44,37 +44,37 @@ import mergePatch from 'https://unpkg.com/tiny-merge-patch/esm/index.js'
 ## Usage
 
 ```js
+// Original document / object.
 const doc = {
   a: 'b',
   c: { d: 'e', f: 'g' },
   h: { i: 0 }
 };
 
+// JSON merge patch to apply.
 const patch = {
   a: 'z',
-  c: { f: null }
+  c: { f: null } // null marks deletions.
 };
 
+// Apply the patch.
 const patchedDoc = mergePatch(doc, patch);
 
-// Apply JSON merge patches.
-console.assert(
-  patchedDoc,
-  {
-    a: 'z',
-    c: { d: 'e' },
-    h: { i: 0 }
-  }
-);
+// tiny-merge-patch complies with the RFC specification.
+assert.deepEqual(patchedDoc, {
+  a: 'z',
+  c: { d: 'e' },
+  h: { i: 0 },
+});
 
-// Does not mutate the original document...
-console.assert(patchedDoc !== doc);
+// Additionally, it does not mutate the original document...
+assert(patchedDoc !== doc);
 
 // ...nor its content...
-console.assert(patchedDoc.c !== doc.c);
+assert(patchedDoc.c !== doc.c);
 
 // ...but recycles what it can.
-console.assert(patchedDoc.h === doc.h);
+assert(patchedDoc.h === doc.h);
 ```
 
 ## Alternatives
