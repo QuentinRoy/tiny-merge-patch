@@ -1,0 +1,21 @@
+root: true
+extends:
+  - airbnb-base
+  - prettier
+plugins:
+  - prettier
+env:
+  browser: true
+rules:
+  prettier/prettier:
+    - error
+    - singleQuote: true
+      trailingComma: all
+  valid-jsdoc: error
+overrides:
+  files:
+    - test/**
+  rules:
+    import/no-extraneous-dependencies:
+      - error
+      - devDependencies: true

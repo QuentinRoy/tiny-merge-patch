@@ -1,10 +1,7 @@
-JSON Merge Patch
-===============
+Nano JSON Merge Patch
+=====================
 
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][dep-image]][dep-url]
-[![devDependency Status][devDep-image]][devDep-url]
+[![Build Status](https://travis-ci.org/QuentinRoy/nano-json-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/nano-json-merge-patch)
 
 An implementation of the JSON Merge Patch [RFC 7396](http://tools.ietf.org/html/rfc7396)
 
@@ -20,88 +17,54 @@ Install the current version (and save it as a dependency):
 ### npm
 
 ```sh
-$ npm install json-merge-patch --save
+npm install nano-json-merge-patch --save
 ```
 
+## Import
+
+### CommonJs with node
+
+```js
+// Fetch `apply` from the module.
+const jsonMergePatch = require('nano-json-merge-patch').apply;
+```
+
+### ES modules in the browser
+
+```js
+// `apply` is also the default export.
+import jsonMergePatch from 'https://unpkg.com/nano-json-merge-patch/esm/index.js'
+```
 
 ## Usage
 
-Applying patches:
 ```js
-var source = {
-  "title": "Goodbye!",
-  "author" : {
-		"givenName" : "John",
-		"familyName" : "Doe"
-	}
+const doc = {
+  a: 'b',
+  c: {
+    d: 'e',
+    f: 'g'
+  }
 };
 
-var patch = {
-	"title": 'Hello!',
-	"author": {
-		"familyName": null
-	}
-}
-
-var target = jsonmergepatch.apply(source, patch);
-
-// target = {
-// 	"title": "Hello!",
-//   "author" : {
-// 		"givenName" : "John",
-// 	}
-// }
-```
-
-Generating patches:
-```js
-var source = {
-  "title": "Goodbye!",
-  "author" : "John Doe"
+const patch = {
+  a: 'z',
+  c: {
+    f: null
+  }
 };
 
-var target = {
-	"title": "Hello!",
-};
+console.assert(
+  jsonMergePatch(doc, patch),
+  {
+    a: 'z',
+    c: {
+      d: 'e'
+    }
+  }
+);
 
-var patch = jsonmergepatch.generate(source, target);
-
-// patch = {
-// 	"title": 'Hello!',
-// 	"author": null
-// }
-```
-
-## API
-
-#### jsonmergepatch.apply (`obj` Object, `patch` Object) : Object
-
-Applies `patch` on `obj`.
-
-#### jsonmergepatch.generate (`source` Object, `target` Object) : `patch` Object
-
-Generates a `patch` Object from source and target Object.
-
-
-#### jsonmergepatch.merge (`patch1` Object, `patch2` Object) : `patch` Object
-
-Generates a `patch` Object by merging patch1 and patch2.
-
-## Running tests
-
-```sh
-make test
-```
 
 # License
 
   MIT
-
-[travis-image]: https://img.shields.io/travis/pierreinglebert/json-merge-patch/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/pierreinglebert/json-merge-patch
-[coveralls-image]: https://img.shields.io/coveralls/pierreinglebert/json-merge-patch/master.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/pierreinglebert/json-merge-patch?branch=master
-[dep-image]: https://img.shields.io/david/pierreinglebert/json-merge-patch.svg
-[dep-url]: https://david-dm.org/pierreinglebert/json-merge-patch
-[devDep-image]: https://img.shields.io/david/dev/pierreinglebert/json-merge-patch.svg
-[devDep-url]: https://david-dm.org/pierreinglebert/json-merge-patch#info=devDependencies
