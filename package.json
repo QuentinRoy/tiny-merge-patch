@@ -1,7 +1,7 @@
 {
   "name": "nano-json-merge-patch",
   "version": "0.1.0",
-  "description": "Implementation of JSON Merge Patch (RFC 7396)",
+  "description": "JSON Merge Patch (RFC 7396) Implementation",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "directories": {

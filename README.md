@@ -6,12 +6,14 @@ Nano JSON Merge Patch
 [![dependencies Status](https://david-dm.org/quentinroy/nano-json-merge-patch/status.svg)](https://david-dm.org/quentinroy/nano-json-merge-patch)
 [![devDependencies Status](https://david-dm.org/quentinroy/nano-json-merge-patch/dev-status.svg)](https://david-dm.org/quentinroy/nano-json-merge-patch?type=dev)
 
-An implementation of the JSON Merge Patch [RFC 7396](http://tools.ietf.org/html/rfc7396)
+An implementation of the JSON Merge Patch [RFC 7396](http://tools.ietf.org/html/rfc7396): a standard format used
+to describe modifications to a JSON document.
 
-JSON Merge Patch [(RFC 7396)](http://tools.ietf.org/html/rfc7396) is a standard format that
-allows you to update a JSON document by sending the changes rather than the whole document.
-JSON Merge Patch plays well with the HTTP PATCH verb (method) and REST style programming.
+This library complies with the functional programming style: it does not mutate the original target, but
+recycle what it can.
 
+It is originally forked from Pierre Inglebert's 
+[json-merge-patch](https://github.com/pierreinglebert/json-merge-patch).
 
 ## Install
 
@@ -47,6 +49,9 @@ const doc = {
   c: {
     d: 'e',
     f: 'g'
+  },
+  h: {
+    i: 0
   }
 };
 
@@ -57,14 +62,35 @@ const patch = {
   }
 };
 
+const patchedDoc = jsonMergePatch(doc, patch);
+
+// Apply JSON merge patches.
 console.assert(
-  jsonMergePatch(doc, patch),
+  patchedDoc,
   {
     a: 'z',
     c: {
       d: 'e'
+    },
+    h: {
+      i: 0
     }
   }
+);
+
+// Does not mutate the original document...
+console.assert(
+  patchedDoc !== doc
+);
+
+// ...nor its content...
+console.assert(
+  patchedDoc.c !== doc.c
+);
+
+// ...But recycle what it can.
+console.assert(
+  patchedDoc.h === doc.h
 );
 ```
 
