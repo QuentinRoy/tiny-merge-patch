@@ -46,20 +46,13 @@ import mergePatch from 'https://unpkg.com/tiny-merge-patch/esm/index.js'
 ```js
 const doc = {
   a: 'b',
-  c: {
-    d: 'e',
-    f: 'g'
-  },
-  h: {
-    i: 0
-  }
+  c: { d: 'e', f: 'g' },
+  h: { i: 0 }
 };
 
 const patch = {
   a: 'z',
-  c: {
-    f: null
-  }
+  c: { f: null }
 };
 
 const patchedDoc = mergePatch(doc, patch);
@@ -69,29 +62,19 @@ console.assert(
   patchedDoc,
   {
     a: 'z',
-    c: {
-      d: 'e'
-    },
-    h: {
-      i: 0
-    }
+    c: { d: 'e' },
+    h: { i: 0 }
   }
 );
 
 // Does not mutate the original document...
-console.assert(
-  patchedDoc !== doc
-);
+console.assert(patchedDoc !== doc);
 
 // ...nor its content...
-console.assert(
-  patchedDoc.c !== doc.c
-);
+console.assert(patchedDoc.c !== doc.c);
 
-// ...But recycle what it can.
-console.assert(
-  patchedDoc.h === doc.h
-);
+// ...but recycles what it can.
+console.assert(patchedDoc.h === doc.h);
 ```
 
 ## Alternatives
