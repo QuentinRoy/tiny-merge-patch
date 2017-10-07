@@ -1,5 +1,5 @@
 {
-  "presets": [["env", { "targets": { "browsers": ">1%" } }]],
+  "presets": ["env"],
   "env": {
     "test": {
       "plugins": [ "istanbul" ],
