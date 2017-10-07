@@ -3,9 +3,8 @@
  * @param {*} val - A value.
  * @return {boolean} true if `val` is a plain object.
  */
-function isObject(val) {
-  return val != null && typeof val === 'object' && Array.isArray(val) === false;
-}
+const isObject = val =>
+  val != null && typeof val === 'object' && Array.isArray(val) === false;
 
 /**
  * Apply a JSON merge patch. The origin is *not* modified, but unchanged
