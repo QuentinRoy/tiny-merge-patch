@@ -4,6 +4,7 @@
   "description": "JSON Merge Patch (RFC 7396) Implementation",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "files": ["cjs", "esm"],
   "devDependencies": {
     "@commitlint/cli": "^4.1.0",
     "@commitlint/config-angular": "^3.1.1",
