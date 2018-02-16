@@ -9,7 +9,7 @@ const isObject = val =>
 /**
  * Apply a JSON merge patch. The origin is *not* modified, but unchanged
  * properties will be recycled.
- * 
+ *
  * @param {*} origin - The value to patch.
  * @param {*} patch - An [RFC 7396](https://tools.ietf.org/html/rfc7396) patch.
  * @return {*} The patched value.

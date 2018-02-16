@@ -76,7 +76,7 @@ test('`jsonMergePatch` should not set an attribute to null in a sub object', t =
 test('`jsonMergePatch` should not directly edit the origin', t => {
   const origin = { a: { b: 10 }, c: 5 };
   const clone = cloneDeep(origin);
-  const patched = jsonMergePatch(origin, { a: { b: 8 } }, origin);
+  const patched = jsonMergePatch(origin, { a: { b: 8 } });
   t.not(patched, origin);
   t.not(patched.a, origin.a);
   t.deepEqual(origin, clone);
@@ -84,6 +84,6 @@ test('`jsonMergePatch` should not directly edit the origin', t => {
 
 test('`jsonMergePatch` should recycle properties if possible', t => {
   const origin = { a: { b: 10 }, c: 5 };
-  const patched = jsonMergePatch(origin, { c: 8 }, origin);
+  const patched = jsonMergePatch(origin, { c: 8 });
   t.is(patched.a, origin.a);
 });
