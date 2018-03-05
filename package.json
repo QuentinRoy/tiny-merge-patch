@@ -25,7 +25,7 @@
     "istanbul": "0.4.5",
     "lodash": "4.17.5",
     "nyc": "11.4.1",
-    "prettier": "1.10.2",
+    "prettier": "1.11.1",
     "standard-version": "4.3.0"
   },
   "scripts": {
