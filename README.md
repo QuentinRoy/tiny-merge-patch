@@ -6,6 +6,7 @@ Tiny Merge Patch
 [![dependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch)
 [![devDependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/dev-status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch?type=dev)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![NPM version](https://img.shields.io/npm/v/tiny-merge-patch.svg)](https://www.npmjs.com/package/tiny-merge-patch)
 
 An implementation of the JSON Merge Patch
 [RFC 7396](http://tools.ietf.org/html/rfc7396): a standard format used to
