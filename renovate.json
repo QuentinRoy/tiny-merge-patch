@@ -1,5 +1,25 @@
 {
   "extends": [
-    "config:js-lib"
+    "schedule:weekends",
+    "config:js-lib",
+    ":automergeMinor",
+    ":automergeBranchPush",
+    ":semanticCommits",
+    ":rebaseStalePrs"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": ["eslint"],
+      "packageNames": ["prettier"],
+      "groupName": "style"
+    },
+    {
+      "packagePatterns": ["babel"],
+      "groupName": "babel"
+    },
+    {
+      "packageNames": ["nyc", "istanbul", "ava"],
+      "groupName": "test"
+    }
   ]
 }
