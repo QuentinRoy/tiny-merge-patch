@@ -20,7 +20,7 @@
     "eslint-config-airbnb-base": "13.0.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-prettier": "2.6.1",
+    "eslint-plugin-prettier": "2.6.2",
     "husky": "0.14.3",
     "istanbul": "0.4.5",
     "lodash": "4.17.10",
