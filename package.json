@@ -9,7 +9,7 @@
     "esm"
   ],
   "devDependencies": {
-    "@commitlint/cli": "7.1.2",
+    "@commitlint/cli": "7.2.0",
     "@commitlint/config-conventional": "7.1.2",
     "ava": "0.25.0",
     "babel-cli": "6.26.0",
