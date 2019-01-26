@@ -19,13 +19,13 @@
     "eslint": "5.12.1",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "2.10.0",
-    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-import": "2.15.0",
     "eslint-plugin-prettier": "2.7.0",
     "husky": "0.14.3",
     "istanbul": "0.4.5",
     "lodash": "4.17.11",
     "nyc": "12.0.2",
-    "prettier": "1.16.0",
+    "prettier": "1.16.1",
     "standard-version": "4.4.0"
   },
   "scripts": {
