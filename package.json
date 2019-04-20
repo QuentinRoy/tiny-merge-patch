@@ -26,7 +26,7 @@
     "lodash": "4.17.11",
     "nyc": "12.0.2",
     "prettier": "1.17.0",
-    "standard-version": "4.4.0"
+    "standard-version": "5.0.2"
   },
   "scripts": {
     "build": "babel esm -d cjs --extensions \".mjs\",\".js\"",
