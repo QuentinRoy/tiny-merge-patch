@@ -23,7 +23,7 @@
     "eslint-plugin-prettier": "2.7.0",
     "husky": "0.14.3",
     "istanbul": "0.4.5",
-    "lodash": "4.17.13",
+    "lodash": "4.17.14",
     "nyc": "12.0.2",
     "prettier": "1.18.2",
     "standard-version": "4.4.0"
