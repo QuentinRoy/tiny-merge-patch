@@ -13,7 +13,7 @@ An implementation of the JSON Merge Patch
 describe modifications to JSON documents. 
 
 This library complies with the functional programming style: it does not mutate
-the original target, but recycles what it can.
+the original target, but recycles what it can. It is particularly appropriate to update a state used by [React](https://reactjs.org), allowing selective re-rendering of the UI.
 
 `tiny-merge-patch` passes all [RFC 7396](http://tools.ietf.org/html/rfc7396) tests.
 
