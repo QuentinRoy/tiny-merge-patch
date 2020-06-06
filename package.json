@@ -24,7 +24,7 @@
     "husky": "0.14.3",
     "istanbul": "0.4.5",
     "lodash": "4.17.15",
-    "nyc": "15.0.1",
+    "nyc": "15.1.0",
     "prettier": "1.19.1",
     "standard-version": "4.4.0"
   },
