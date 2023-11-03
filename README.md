@@ -103,9 +103,7 @@ It is also worth mentioning that unlike
 [JSON patches](https://tools.ietf.org/html/rfc6902), there is no way to
 implement merge of merge patches that reliably preserves deletion.)
 
-- [`immutable-merge-patch`](https://www.npmjs.com/package/immutable-merge-patch)
-
-JSON merge patch implementation for [Immutable.js](https://facebook.github.io/immutable-js/).
+- [`immutable-merge-patch`](https://www.npmjs.com/package/immutable-merge-patch): JSON merge patch implementation for [Immutable.js](https://facebook.github.io/immutable-js/).
 
 # License
 
