@@ -1,10 +1,7 @@
 Tiny Merge Patch
 ================
 
-[![Build Status](https://travis-ci.org/QuentinRoy/tiny-merge-patch.svg?branch=master)](https://travis-ci.org/QuentinRoy/tiny-merge-patch)
 [![codecov](https://img.shields.io/codecov/c/github/QuentinRoy/tiny-merge-patch.svg)](https://codecov.io/gh/QuentinRoy/tiny-merge-patch)
-[![dependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch)
-[![devDependencies Status](https://david-dm.org/quentinroy/tiny-merge-patch/dev-status.svg)](https://david-dm.org/quentinroy/tiny-merge-patch?type=dev)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![NPM version](https://img.shields.io/npm/v/tiny-merge-patch.svg)](https://www.npmjs.com/package/tiny-merge-patch)
 
@@ -29,18 +26,17 @@ npm install tiny-merge-patch --save
 
 ## Import
 
-### CommonJs with node
+### ES modules
 
 ```js
-// Fetch `apply` from the module.
-const mergePatch = require('tiny-merge-patch').apply;
+// `apply` is also the default export.
+import mergePatch from 'tiny-merge-patch'
 ```
 
 ### ES modules in the browser
 
 ```js
-// `apply` is also the default export.
-import mergePatch from 'https://unpkg.com/tiny-merge-patch/esm/index.js'
+import mergePatch from 'https://unpkg.com/tiny-merge-patch/dist/index.mjs'
 ```
 
 ## Usage
@@ -108,3 +104,10 @@ implement merge of merge patches that reliably preserves deletion.)
 # License
 
 [MIT](./LICENSE)
+
+## Development
+
+```sh
+npm run check
+npm run build
+```
