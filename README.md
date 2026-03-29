@@ -35,7 +35,6 @@ pnpm add tiny-merge-patch
 ### ES modules
 
 ```js
-// `apply` is also the default export.
 import mergePatch from 'tiny-merge-patch'
 ```
 
