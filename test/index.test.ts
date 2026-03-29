@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import jsonMergePatch from "../src";
+import jsonMergePatch from "../src/index.js";
 
 describe("jsonMergePatch", () => {
   it("should replace an attribute", () => {
