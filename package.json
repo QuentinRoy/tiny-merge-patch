@@ -1,6 +1,6 @@
 {
   "name": "tiny-merge-patch",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "JSON Merge Patch (RFC 7396) Implementation",
   "packageManager": "pnpm@10.33.0",
   "type": "module",
