@@ -1,5 +1,4 @@
-Tiny Merge Patch
-================
+# Tiny Merge Patch
 
 [![codecov](https://img.shields.io/codecov/c/github/QuentinRoy/tiny-merge-patch.svg)](https://codecov.io/gh/QuentinRoy/tiny-merge-patch)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
@@ -7,7 +6,7 @@ Tiny Merge Patch
 
 An implementation of the JSON Merge Patch
 [RFC 7396](http://tools.ietf.org/html/rfc7396): a standard format used to
-describe modifications to JSON documents. 
+describe modifications to JSON documents.
 
 This library complies with the functional programming style: it does not mutate
 the original target, but recycles what it can. It is particularly appropriate to update a state used by [React](https://reactjs.org), allowing selective re-rendering of the UI.
@@ -108,10 +107,6 @@ implement merge of merge patches that reliably preserves deletion.)
 
 - [`immutable-merge-patch`](https://www.npmjs.com/package/immutable-merge-patch): JSON merge patch implementation for [Immutable.js](https://facebook.github.io/immutable-js/).
 
-# License
-
-[MIT](./LICENSE)
-
 ## Development
 
 ```sh
@@ -133,3 +128,7 @@ pnpm run release
 ```
 
 CI and release automation run on GitHub Actions.
+
+## License
+
+[MIT](./LICENSE)
