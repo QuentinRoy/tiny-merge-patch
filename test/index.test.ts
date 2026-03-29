@@ -1,4 +1,3 @@
-import { cloneDeep } from "lodash";
 import { describe, expect, it } from "vitest";
 import jsonMergePatch from "../src";
 
@@ -76,7 +75,7 @@ describe("jsonMergePatch", () => {
 
   it("should not directly edit the origin", () => {
     const origin = { a: { b: 10 }, c: 5 };
-    const clone = cloneDeep(origin);
+    const clone = structuredClone(origin);
     const patched = jsonMergePatch(origin, { a: { b: 8 } }) as typeof origin;
 
     expect(patched).not.toBe(origin);

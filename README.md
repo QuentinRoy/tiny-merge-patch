@@ -111,3 +111,18 @@ implement merge of merge patches that reliably preserves deletion.)
 npm run check
 npm run build
 ```
+
+### Releases
+
+```sh
+# Create a release note entry
+npm run changeset
+
+# Apply version bumps from pending changesets
+npm run version-packages
+
+# Publish to npm
+npm run release
+```
+
+CI and release automation run on GitHub Actions.
