@@ -4,13 +4,13 @@ import jsonMergePatch from "../src/index.js";
 
 describe("jsonMergePatch type", () => {
   it("should replace an attribute", () => {
-    const patched = jsonMergePatch({ a: "b" }, { a: "c" });
-    expectTypeOf(patched).toEqualTypeOf<{ a: string }>();
+    const patched = jsonMergePatch({ a: "b" } as const, { a: "c" } as const);
+    expectTypeOf(patched).toEqualTypeOf<{ a: "c" }>();
   });
 
   it("should add an attribute", () => {
-    const patched = jsonMergePatch({ a: "b" }, { b: "c" });
-    expectTypeOf(patched).toEqualTypeOf<{ a: string; b: string }>();
+    const patched = jsonMergePatch({ a: "b" } as const, { b: "c" } as const);
+    expectTypeOf(patched).toEqualTypeOf<{ a: "b"; b: "c" }>();
   });
 
   it("should delete attribute", () => {
@@ -21,13 +21,13 @@ describe("jsonMergePatch type", () => {
   });
 
   it("should delete attribute without affecting others", () => {
-    const patched = jsonMergePatch({ a: "b", b: "c" }, { a: null });
-    expectTypeOf(patched).toEqualTypeOf<{ b: string }>();
+    const patched = jsonMergePatch({ a: "b", b: "c" } as const, { a: null });
+    expectTypeOf(patched).toEqualTypeOf<{ b: "c" }>();
   });
 
   it("should replace array with a string", () => {
-    const patched = jsonMergePatch({ a: ["b"] }, { a: "c" });
-    expectTypeOf(patched).toEqualTypeOf<{ a: string }>();
+    const patched = jsonMergePatch({ a: ["b"] }, { a: "c" } as const);
+    expectTypeOf(patched).toEqualTypeOf<{ a: "c" }>();
   });
 
   it("should replace a string with an array", () => {
@@ -41,8 +41,8 @@ describe("jsonMergePatch type", () => {
   });
 
   it("should replace an object array with a number array", () => {
-    const patched = jsonMergePatch({ a: [{ b: "c" }] }, { a: [1] as const });
-    expectTypeOf(patched).toEqualTypeOf<{ a: readonly [1] }>();
+    const patched = jsonMergePatch({ a: [{ b: "c" }] }, { a: [1] });
+    expectTypeOf(patched).toEqualTypeOf<{ a: number[] }>();
   });
 
   it("should replace an array", () => {
@@ -51,8 +51,8 @@ describe("jsonMergePatch type", () => {
   });
 
   it("should replace an object with an array", () => {
-    const patched = jsonMergePatch({ a: "b" }, ["c"] as const);
-    expectTypeOf(patched).toEqualTypeOf<readonly ["c"]>();
+    const patched = jsonMergePatch({ a: "b" }, ["c"]);
+    expectTypeOf(patched).toEqualTypeOf<string[]>();
   });
 
   it("should replace an object with null", () => {
