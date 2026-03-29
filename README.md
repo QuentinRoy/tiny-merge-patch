@@ -24,6 +24,12 @@ Install the current version (and save it as a dependency):
 npm install tiny-merge-patch --save
 ```
 
+### pnpm
+
+```sh
+pnpm add tiny-merge-patch
+```
+
 ## Import
 
 ### ES modules
@@ -108,21 +114,21 @@ implement merge of merge patches that reliably preserves deletion.)
 ## Development
 
 ```sh
-npm run check
-npm run build
+pnpm run check
+pnpm run build
 ```
 
 ### Releases
 
 ```sh
 # Create a release note entry
-npm run changeset
+pnpm run changeset
 
 # Apply version bumps from pending changesets
-npm run version-packages
+pnpm run version-packages
 
 # Publish to npm
-npm run release
+pnpm run release
 ```
 
 CI and release automation run on GitHub Actions.

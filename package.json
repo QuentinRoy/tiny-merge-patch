@@ -2,6 +2,7 @@
   "name": "tiny-merge-patch",
   "version": "0.1.2",
   "description": "JSON Merge Patch (RFC 7396) Implementation",
+  "packageManager": "pnpm@10.33.0",
   "type": "module",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
@@ -28,19 +29,19 @@
   },
   "scripts": {
     "clean": "rimraf dist coverage",
-    "build": "npm run clean && tsc -p tsconfig.build.json && mv dist/index.js dist/index.mjs",
+    "build": "pnpm run clean && tsc -p tsconfig.build.json && mv dist/index.js dist/index.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prepare": "husky",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm run build",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "check": "npm run lint && npm run typecheck && npm run test",
-    "check:staged": "npm run lint && npm run test"
+    "check": "pnpm run lint && pnpm run typecheck && pnpm run test",
+    "check:staged": "pnpm run lint && pnpm run test"
   },
   "repository": {
     "type": "git",
