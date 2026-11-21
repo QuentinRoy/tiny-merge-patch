@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import jsonMergePatch from "../src/index.js";
+import { mergePatchVectors } from "./merge-patch-vectors.js";
 
 describe("jsonMergePatch", () => {
   it("should replace an attribute", () => {
@@ -88,5 +89,9 @@ describe("jsonMergePatch", () => {
     const patched = jsonMergePatch(origin, { c: 8 }) as typeof origin;
 
     expect(patched.a).toBe(origin.a);
+  });
+
+  it.each(mergePatchVectors)("should match $source:$index", ({ target, patch, expectedOutput }) => {
+    expect(jsonMergePatch(target, patch)).toEqual(expectedOutput);
   });
 });
